@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootPubGolfResults"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBarResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_900"
+        android:elevation="4dp"
+        app:title="Pub Golf Results"
+        app:titleCentered="true"
+        app:titleTextColor="@color/milk"
+        app:navigationIcon="@drawable/ic_round_arrow_back_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_background"
+
+    tools:context=".DashboardActivity">
+
+    <!-- SCROLLABLE CONTENT -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="24dp"
+        android:layout_marginBottom="120dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Avatar -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/avatar_no_avatar"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircleImageView"/>
+
+                <!-- Bell Icon -->
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/ui_background"
+                    android:contentDescription="@string/notification_icon"
+                    android:src="@drawable/ic_bell"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnBell"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="invisible"/>
+
+                <!-- Search Icon -->
+                <ImageButton
+                    android:id="@+id/btnBell"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/ui_background"
+                    android:contentDescription="@string/search_icon"
+                    android:src="@drawable/ic_bell"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/imPubGolf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_check_in_pill"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSearch">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/sora_medium"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/pub_golf"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/ivCheckInIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/ic_flag_golf"
+                        app:tint="@android:color/white"
+                        android:contentDescription="@string/app_name"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/txtGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hi"
+                android:fontFamily="@font/termina_test_black"
+                android:textColor="@color/yellow"
+                android:letterSpacing="0.05"
+                android:textSize="32sp"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Popular this week -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_this_week"
+                android:fontFamily="@font/sora_semibold"
+                android:textColor="@color/milk"
+                android:textSize="20sp"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPopularBars"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"/>
+            </FrameLayout>
+
+
+            <!-- Bars near me -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/bars_near_me"
+                    android:fontFamily="@font/sora_semibold"
+                    android:textColor="@color/milk"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imPubGolfs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/location_marker"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_pub_golf"/>
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mapSnippetCard"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mapbox.maps.MapView
+                        android:id="@+id/mapSnippetView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!-- Tiny visual “you are here” indicator, shown after centering -->
+                    <ImageView
+                        android:id="@+id/snippetCenterDot"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/location_marker"
+                        android:visibility="gone"
+                        android:background="@android:drawable/presence_online"
+                        android:backgroundTint="@color/aquamarine"/>
+
+                    <!-- Full overlay that guarantees taps open MapActivity -->
+                    <View
+                        android:id="@+id/mapSnippetTapTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Friends fav's -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friends_fav_s"
+                android:fontFamily="@font/sora_semibold"
+                android:textColor="@color/milk"
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/friendsFavSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/tvNoFriendsFavs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friends_fav_wait"
+                        android:fontFamily="@font/sora_semibold"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFriendsFav"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Friends check-in's -->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Friends check-in's"-->
+<!--            android:textColor="@color/milk"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginTop="16dp"/>-->
+
+<!--            <HorizontalScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="110dp"-->
+<!--                android:overScrollMode="never"-->
+<!--                android:scrollbars="none"-->
+<!--                android:layout_marginTop="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="104dp"-->
+<!--                        android:layout_height="104dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img_food_placeholder"/>-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="104dp"-->
+<!--                        android:layout_height="104dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img_food_placeholder"/>-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="104dp"-->
+<!--                        android:layout_height="104dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img_food_placeholder"/>-->
+<!--                </LinearLayout>-->
+<!--            </HorizontalScrollView>-->
+
+            <!-- Friends reviews -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friends_reviews"
+                android:textColor="@color/milk"
+                android:fontFamily="@font/sora_semibold"
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/friendsReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/tvNoFriendReviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_reviews_yet"
+                        android:fontFamily="@font/sora_semibold"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFriendReviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:clipToPadding="false"
+                        android:paddingEnd="8dp"
+                        android:overScrollMode="never"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlSymmetry" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottomNavBar"
+        layout="@layout/activity_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

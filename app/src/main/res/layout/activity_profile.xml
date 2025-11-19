@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_background"
+    tools:context=".ProfileActivity">
+
+    <!-- Scrollable -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="24dp"
+        android:layout_marginBottom="120dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/settings_icon"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_settings"
+                    android:contentDescription="@string/settings"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/termina_test_black"
+                    android:text="@string/username"
+                    android:textSize="34sp"
+                    android:textColor="@color/yellow"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatar"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/avatar_no_avatar"
+                android:contentDescription="@string/avatar"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                app:layout_constraintBottom_toBottomOf="@id/rl_settings"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/location"
+                        android:src="@drawable/ic_location_mark" />
+
+                    <TextView
+                        android:id="@+id/profileLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location"
+                        android:fontFamily="@font/sora_regular"
+                        android:textColor="@color/milk"
+                        android:letterSpacing="0.02"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            <View
+                android:id="@+id/headerDivider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2B2B2B"
+                android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_dop"
+                android:fontFamily="@font/sora_semibold"
+                android:textColor="@color/milk"
+                android:textSize="20sp"
+                android:letterSpacing="0.05"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/myDop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sora_regular"
+                android:text="@string/myDop"
+                android:textColor="@color/milk"
+                android:background="@drawable/bg_fav_drink_pill"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+            <View
+                android:id="@+id/headerDividertwo"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2B2B2B"
+                android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favourite_bars"
+                android:fontFamily="@font/sora_semibold"
+                android:textColor="@color/milk"
+                android:textSize="20sp"
+                android:letterSpacing="0.05"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"/>
+
+<!--            need to fix CHANGE TO RECYCLER VIEW TO FOR PART THREE -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:id="@+id/favouriteBarsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Bar item 1 -->
+                    <include layout="@layout/item_bar_dashboard" android:id="@+id/bar1_include"/>
+                    <!-- Bar item 2 -->
+                    <include layout="@layout/item_bar_dashboard" android:id="@+id/bar2_include"/>
+                    <!-- Bar item 3 -->
+                    <include layout="@layout/item_bar_dashboard" android:id="@+id/bar3_include"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--            need to fix CHANGE TO RECYCLER VIEW TO FOR PART THREE -->
+
+        </LinearLayout>
+
+            <View
+                android:id="@+id/headerDividerThree"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2B2B2B"
+                android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/list_divider_settings"
+            android:gravity="start"
+            android:layout_marginTop="16dp"
+            android:showDividers="middle">
+
+                <include
+                    android:id="@+id/item_bars_visited"
+                    layout="@layout/profile_list_item" />
+
+             <include
+                    android:id="@+id/item_friends"
+                    layout="@layout/profile_list_item" />
+
+ <!--               <include
+                    android:id="@+id/item_reviews"
+                    layout="@layout/profile_list_item" /> -->
+        </LinearLayout>
+<!--            <include-->
+<!--                android:id="@+id/item_logout"-->
+<!--                layout="@layout/profile_list_item"/>-->
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottomNavBar"
+        layout="@layout/activity_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootPubGolfRules"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_background">
+
+    <!-- Top bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBarPubGolfRules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_900"
+        android:elevation="4dp"
+        app:title="Pub Golf Rules"
+        app:titleCentered="true"
+        app:titleTextColor="@color/milk"
+        app:navigationIcon="@drawable/ic_round_arrow_back_24"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+    <!-- Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollRules"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginTop="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header strip -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/bg_pub_rules"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/tvPubGolfTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/what_is_pub_golf"
+                    android:textColor="@color/milk"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/sora_semibold" />
+
+                <TextView
+                    android:id="@+id/tvPubGolfSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/pubgolf_overview"
+                    android:textColor="@color/milk"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sora_regular" />
+            </LinearLayout>
+
+            <!-- Basics -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/black_900"
+                app:strokeColor="@color/Dark_Purple"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/basics"
+                        android:textColor="@color/yellow"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/basics_instructions"
+                        android:textColor="@color/milk"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_regular" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Drinks & scoring -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/black_900"
+                app:strokeColor="@color/Dark_Purple"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drinks_and_scores"
+                        android:textColor="@color/aquamarine"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/drinks_and_scoring_instructions"
+                        android:textColor="@color/milk"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_regular" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/scores_and_drinks_instructions2"
+                        android:textColor="@color/lavender"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_semibold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hazards & penalties -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/black_900"
+                app:strokeColor="@color/Dark_Purple"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/penalties"
+                        android:textColor="@color/yellow"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/water_hazards"
+                        android:textColor="@color/aquamarine"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/water_hazards_instructions"
+                        android:textColor="@color/milk"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_regular" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/bunker_hazards"
+                        android:textColor="@color/aquamarine"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/bunker_hazards_instructions"
+                        android:textColor="@color/milk"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_regular" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/spills"
+                        android:textColor="@color/aquamarine"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/spill_instructions"
+                        android:textColor="@color/milk"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_regular" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/cheating"
+                        android:textColor="@color/aquamarine"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sora_semibold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/cheating_instructions"
+                        android:textColor="@color/milk"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sora_regular" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- End note -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/rule_end"
+                android:textColor="@color/mist"
+                android:textSize="13sp"
+                android:fontFamily="@font/sora_regular" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

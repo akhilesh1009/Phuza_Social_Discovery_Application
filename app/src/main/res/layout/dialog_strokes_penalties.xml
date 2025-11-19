@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/ui_background">
+
+        <TextView
+            android:id="@+id/tvHoleInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hole"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
+            android:fontFamily="@font/sora_semibold" />
+
+        <TextView
+            android:id="@+id/tvParInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/par"
+            android:textColor="@color/mist"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/sora_regular" />
+
+        <!-- Base strokes row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/strokes_sips"
+                android:textColor="@color/milk"
+                android:textSize="14sp"
+                android:fontFamily="@font/sora_regular" />
+
+            <ImageButton
+                android:id="@+id/btnMinus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_minus"
+                android:contentDescription="@string/minus"
+                app:tint="@color/lavender" />
+
+            <EditText
+                android:id="@+id/etBaseStrokes"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/milk"
+                android:textColorHint="@color/mist"
+                android:background="@drawable/et_base"
+                android:padding="4dp"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/plus"
+                android:src="@drawable/ic_solid_plus"
+                app:tint="@color/lavender" />
+        </LinearLayout>
+
+        <!-- Penalties -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/penalties"
+            android:textColor="@color/aquamarine"
+            android:textSize="14sp"
+            android:fontFamily="@font/sora_semibold"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/cbWaterHazard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_checkbox"
+            android:text="@string/water_hazard_toilet_break_1"
+            android:padding="10dp"
+            app:buttonTint="@null"
+            android:textColor="@color/milk"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbBunker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_checkbox"
+            android:text="@string/bunker_missed_assigned_drink_downed_shot_3"
+            android:padding="10dp"
+            app:buttonTint="@null"
+            android:textColor="@color/milk"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbSpill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_checkbox"
+            android:text="@string/spilled_drink_3"
+            android:padding="10dp"
+            app:buttonTint="@null"
+            android:textColor="@color/milk"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbCheating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/custom_checkbox"
+            android:text="@string/cheating_lied_about_sips_5"
+            android:padding="10dp"
+            app:buttonTint="@null"
+            android:textColor="@color/milk"
+            android:textSize="13sp" />
+
+        <!-- Total strokes -->
+        <TextView
+            android:id="@+id/tvTotalStrokes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/total_strokes"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:fontFamily="@font/sora_semibold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancelScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_secondary_custom"
+                android:fontFamily="@font/sora_medium"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:backgroundTint="@null"/>
+
+            <Button
+                android:id="@+id/btnSaveScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_custom"
+                android:fontFamily="@font/sora_medium"
+                android:text="@string/save"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:backgroundTint="@null"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

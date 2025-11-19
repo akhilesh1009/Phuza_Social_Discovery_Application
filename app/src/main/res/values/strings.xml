@@ -1,0 +1,241 @@
+<resources>
+    <string name="app_name">Phuza</string>
+    <string name="PHUZA">PHUZA</string>
+    <string name="app_logo">PHUZA Logo</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiaHVuZXRoMjUiLCJhIjoiY21lazUxZXltMDF4YjJtc2U0NXRtZGc5YiJ9.pZgLnYLgg2GXceAJUTkfJQ</string>
+
+    <!-- Login, Register & Forgot Password -->
+    <string name="welcome_back">Welcome back, time to</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="first_name">First Name</string>
+    <string name="username">Username</string>
+    <string name="lets_phuza">Let\'s Phuza</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="enter_your_email_address">Please enter your email address</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="recovery_msg">we’ve sent a recovery link to your email</string>
+
+    <!-- Onboarding -->
+    <string name="setup_your_profile">Setup your profile</string>
+    <string name="step_1">STEP 1</string>
+    <string name="step_2">STEP 2</string>
+    <string name="step_3">STEP 3</string>
+    <string name="step_4">STEP 4</string>
+    <string name="step_5">STEP 5</string>
+    <string name="step_6">STEP 6</string>
+    <string name="what_is_your_date_of_birth">What is your date of birth?</string>
+    <string name="month">Month</string>
+    <string name="date">Date</string>
+    <string name="year">Year</string>
+    <string name="current_location">Current location</string>
+    <string name="location">location</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="pick_your_favourite_bars">Pick your favourite bars</string>
+    <string name="you_can_only_select_up_to_3_bars">You can only select up to 3 bars</string>
+    <string name="search">Search</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="suggested">Suggested</string>
+    <string name="finding_bars">Finding Bars...</string>
+    <string name="what_is_your_dop_of_choice">What is your dop of choice?</string>
+    <string name="add_your_tjommies">Add your chommies</string>
+    <string name="search_by_username">Search by username</string>
+    <string name="add_a_profile_photo">Add a profile photo</string>
+    <string name="avatar">avatar</string>
+    <string name="camera_placeholder">camera placeholder</string>
+    <string name="choose_an_avatar">Choose an Avatar</string>
+    <string name="upload_from_gallery">Upload from Gallery</string>
+    <string name="next">Next</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="you_re_nready_nto_go">YOU\'RE\nREADY\nTO GO</string>
+
+
+    <!-- Dashboard -->
+    <string name="notification_icon">Notification Icon</string>
+    <string name="check_in">Check-in</string>
+    <string name="hi">Hi,</string>
+    <string name="popular_this_week">Popular this week</string>
+    <string name="bars_near_me">Bars near me</string>
+    <string name="location_marker">location_marker</string>
+    <string name="friends_fav_s">Friends fav\'s</string>
+    <string name="friends_fav_wait">Waiting for your friends to share their favourite bars.</string>
+    <string name="friends_reviews">Friends reviews</string>
+    <string name="no_reviews_yet">No reviews yet</string>
+
+    <string name="loading">Loading…</string>
+    <string name="friends_empty">You\'re not following anyone yet.</string>
+    <string name="friends_empty_search">No friends match your search.</string>
+    <string name="pending_empty">No pending requests.</string>
+    <string name="pending_empty_search">No pending requests match your search.</string>
+    <string name="discover_empty">No people to discover right now.</string>
+    <string name="discover_empty_search">No people match your search.</string>
+    <string name="error_prefix">Error: %s</string>
+
+
+    <string name="add_friend">Add</string>
+    <string name="requested">Requested</string>
+    <string name="following">Following</string>
+    <string name="they_follow">Follows you</string>
+    <string name="blocked">Blocked</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+
+    <!-- Profile -->
+    <string name="settings">Settings</string>
+    <string name="myDop">My Dop</string>
+    <string name="go_to_details">Go to details</string>
+    <string name="go_to_setting">Go to settings</string>
+    <string name="item_bars_visited">Bars visited</string>
+    <string name="item_liked_bars">Liked bars</string>
+    <string name="item_barlist">Barlist</string>
+    <string name="item_friends">Friends</string>
+    <string name="item_reviews">Reviews</string>
+    <string name="enabled">Enabled</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+
+    <!-- Settings list menu -->
+    <string name="setting_change_location">Change location</string>
+    <string name="setting_change_password">Change password</string>
+    <string name="setting_notification_prefs">Notification preferences</string>
+    <string name="setting_language_prefs">Language preferences</string>
+
+    <!-- Language settings -->
+    <string name="lang_english">English</string>
+    <string name="lang_isizulu">IsiZulu</string>
+    <string name="lang_afrikaans">Afrikaans</string>
+    <string name="title_language_prefs">Language Preferences</string>
+
+    <!-- Change password settings -->
+    <string name="title_change_password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="update">Update</string>
+    <string name="title_current_location">Current Location</string>
+    <string name="hint_enter_location">enter location</string>
+    <string name="set_your_location">Set your location</string>
+    <string name="select_your_dop">Select your dop</string>
+    <string name="setting_title">Setting Title</string>
+    <string name="connor_s_review">Connor’s review:</string>
+    <string name="lock_stock_had_good_music_but_it_gets_a_bit_crowded">Lock stock had good music but it gets a bit crowded</string>
+    <string name="stars">stars</string>
+    <string name="name">name</string>
+    <string name="friendfav">friendfav</string>
+    <string name="black_label">Black Label</string>
+    <string name="category">Category</string>
+    <string name="selecter">selecter</string>
+    <string name="bar_name">Bar Name</string>
+    <string name="invitations">Invitations</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="place">Place</string>
+    <string name="rating">Rating</string>
+    <string name="add_a_review">Add a Review</string>
+    <string name="add_a_phuza_pic">Add a Phuza Pic</string>
+    <string name="add_photo">add photo</string>
+    <string name="channel_messages_name" translatable="false">phuza-general</string>
+    <string name="channel_messages_desc" translatable="false">Chat message notifications</string>
+    <string name="send">send</string>
+    <string name="add">add</string>
+    <string name="new_chat">New chat</string>
+    <string name="enable_fingerprint_login">Enable Fingerprint Login</string>
+    <string name="language_updated">Language updated</string>
+    <string name="rate">Rate</string>
+    <string name="like">Like</string>
+    <string name="star">Star</string>
+    <string name="friend_name">Friend name</string>
+    <string name="message">Message</string>
+    <string name="friends">Friends</string>
+    <string name="pending">Pending</string>
+    <string name="discover">Discover</string>
+    <string name="loading_friends">Loading friends...</string>
+    <string name="no_friends_yet">No friends yet.</string>
+    <string name="notifications">Notifications</string>
+    <string name="no_notifications_yet">No notifications yet</string>
+    <string name="bars_visited">Bars Visited</string>
+    <string name="add_bar">Add a Bar</string>
+    <string name="name_of_bar">Name of Bar</string>
+    <string name="old_password">Old Password</string>
+    <string name="next_hole">Next Hole</string>
+    <string name="previous_hole">Previous hole</string>
+    <string name="edit_pic">Edit picture/avatar</string>
+    <string name="account">Account</string>
+    <string name="my_dop">My dop</string>
+    <string name="favourite_bars">Favourite bars</string>
+    <string name="phuza_at">Phuza at...</string>
+    <string name="you_have_not_added_any_bars_yet">You have not added any bars yet.</string>
+    <string name="no_matching_friends_found">No matching friends found.</string>
+    <string name="no_friends_available_to_chat_yet">No friends available to chat yet.</string>
+    <string name="start_new_chat">Start new chat</string>
+    <string name="search_friends">Search friends</string>
+    <string name="search_chats">Search chats</string>
+    <string name="search_by_name_or_username">Search by name or username</string>
+    <string name="send_invites">Send invites</string>
+    <string name="create_pub_golf_game">Create Pub Golf Game</string>
+    <string name="pub_golf">Pub Golf</string>
+    <string name="full_name">Full name</string>
+    <string name="player">Player</string>
+    <string name="username_placeholder">\@username</string>
+    <string name="details_bottom_sheet_hole">You must drink at least one assigned drink at this hole. Other drinks are allowed but the main score uses one of these.</string>
+    <string name="assigned_drinks">Assigned Drinks</string>
+    <string name="confirm_avatar">Confirm</string>
+    <string name="begin_game">Begin game</string>
+    <string name="rule_end">Play fair, drink safely, and let the lowest score win.</string>
+    <string name="cheating_instructions"><![CDATA[- Cheating is not allowed.&#10;- If a player is caught cheating or lying about their number of sips, they add +5 strokes to their score.]]></string>
+    <string name="cheating">Cheating 🚫</string>
+    <string name="spill_instructions">- If you spill your drink (or someone else’s drink), you add +3 to your score for that hole.</string>
+    <string name="spills">Spills 🍺</string>
+    <string name="bunker_hazards_instructions"><![CDATA[- Some pubs are bunker holes.&#10;- If a player does not drink one of the assigned drinks, they must down a shot to “get out of the bunker” and add +3 strokes to that hole.]]></string>
+    <string name="bunker_hazards">Bunker hazards 🏖️</string>
+    <string name="water_hazards_instructions"><![CDATA[- Some pubs are marked as water hazards.&#10;- If a player needs the toilet while at a water hazard hole, they add +1 to their score for that hole.]]></string>
+    <string name="water_hazards">Water hazards 💧</string>
+    <string name="scores_and_drinks_instructions2">Lowest total strokes (sips) after 9 holes wins.</string>
+    <string name="drinks_and_scoring_instructions"><![CDATA[- Each pub has 3 assigned drinks of similar strength. Each drink has a par value (e.g. par 3).&#10;- Players can drink other drinks, but must have at least one of the assigned drinks at that hole.&#10;- The score for a hole is the number of sips it takes to finish the chosen drink.&#10;- The host enters the number of sips in the score dialog. Other drinks and extra sips can be noted too.&#10;- Everyone’s score for the hole is added to the scorecard before moving to the next pub.]]></string>
+    <string name="drinks_and_scores">Drinks and Scoring</string>
+    <string name="basics">Basics</string>
+    <string name="what_is_pub_golf">What is Pub Golf?</string>
+    <string name="pubgolf_overview">9 pubs. 9 holes. Lowest total sips wins.</string>
+    <string name="basics_instructions"><![CDATA[- The host creates a game and chooses 9 pubs. Each pub is a “hole”.&#10;- All locations are fetched automatically using the Phuza map (Discover Pubs).&#10;- The host is in charge of entering everyone’s scores for every hole.]]></string>
+    <string name="no_friends_available_to_invite">No friends yet. Add some from the Friends tab.</string>
+    <string name="pubgolf_invite_instruction">Select friends to invite to this Pub Golf game.</string>
+    <string name="invite_friends">Invite friends</string>
+    <string name="check_ins">Check ins</string>
+    <string name="new_followers">New followers</string>
+    <string name="email_notifications">Email Notifications</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="search_bars_maps">Search bars</string>
+    <string name="coming_soon">Coming Soon...</string>
+    <string name="chats">Chats</string>
+    <string name="talk_to_your_chommies">Chat to you chommies</string>
+    <string name="no_chats">No chats yet.</string>
+    <string name="start_conversation">Start a conversation by tapping the + button</string>
+    <string name="recent">Recent</string>
+    <string name="hole">Hole</string>
+    <string name="par">Par</string>
+    <string name="strokes_sips">Strokes (Sips)</string>
+    <string name="minus">Minus</string>
+    <string name="plus">Plus</string>
+    <string name="penalties">Penalties</string>
+    <string name="total_strokes">Total Strokes: -</string>
+    <string name="spilled_drink_3">Spilled Drink (+3)</string>
+    <string name="bunker_missed_assigned_drink_downed_shot_3">Bunker - Missed assigned drink, down a shot (+3)</string>
+    <string name="water_hazard_toilet_break_1">Water Hazard - Toilet break (+1)</string>
+    <string name="cheating_lied_about_sips_5">Cheating/lied about sips (+5)</string>
+    <string name="tap_the_current_hole_under_a_player_to_edit_strokes_host_only_long_press_to_see_hole_rules">Tap the current hole under a player to edit strokes (host only). Long press to see hole rules.</string>
+    <string name="rules">Rules</string>
+    <string name="hole_1">Hole 1</string>
+    <string name="end_game">End Game</string>
+    <string name="are_you_sure_you_want_to_finish_this_pub_golf_game">Are you sure you want to end the game?</string>
+    <string name="join_game">Join Game</string>
+    <string name="you_ve_been_invited_to_join_this_pub_golf_game">You have been invited to join this pub golf game.</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="display_name">Display Name</string>
+
+</resources>

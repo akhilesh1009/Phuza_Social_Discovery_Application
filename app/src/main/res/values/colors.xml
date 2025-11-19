@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ui_background">#1E1E1E</color>
+    <color name="yellow">#FFFD74</color>
+    <color name="milk">#FFFEF7</color>
+    <color name="lavender">#B98EFF</color>
+    <color name="slate_blue">#856BFF</color>
+    <color name="slate_blue_30">#4D856BFF</color>
+    <color name="aquamarine">#65FCE1</color>
+    <color name="mist">#959396</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="Dark_Purple">#55466D</color>
+    <color name="black_900">#111111</color>
+    <color name="nav_icon_active">#111111</color>
+    <color name="nav_icon_inactive">#4D111111</color>
+    <color name="error_color">#FF5722</color>
+    <color name="star_inactive">#C4C4C4</color>
+    <color name="text_dark">#212121</color>
+    <color name="crystal_aqua">#9DF6F6</color>
+    <color name="liberty_green">#35675e</color>
+
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black_900">
+
+    <TextView
+        android:id="@+id/tvHoleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hole 1 – Bar name"
+        android:textColor="@color/milk"
+        android:textSize="18sp"
+        android:fontFamily="@font/sora_semibold" />
+
+    <TextView
+        android:id="@+id/tvHoleAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Address"
+        android:textColor="@color/mist"
+        android:textSize="13sp"
+        android:fontFamily="@font/sora_regular" />
+
+    <TextView
+        android:id="@+id/tvHoleMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Par 3 • Water hazard 💧"
+        android:textColor="@color/yellow"
+        android:textSize="13sp"
+        android:fontFamily="@font/sora_semibold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/slate_blue_30" />
+
+    <TextView
+        android:id="@+id/tvDrinksHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/assigned_drinks"
+        android:textColor="@color/aquamarine"
+        android:textSize="15sp"
+        android:fontFamily="@font/sora_semibold" />
+
+    <LinearLayout
+        android:id="@+id/listDrinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp">
+
+        <!-- drinks added programmatically -->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/details_bottom_sheet_hole"
+        android:textColor="@color/mist"
+        android:textSize="12sp"
+        android:fontFamily="@font/sora_regular" />
+
+</LinearLayout>

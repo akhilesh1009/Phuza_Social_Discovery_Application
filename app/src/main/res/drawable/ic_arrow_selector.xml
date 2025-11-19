@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Spinner expanded -->
+    <item android:drawable="@drawable/ic_up_arrow" android:state_pressed="true"/>
+    <item android:drawable="@drawable/ic_up_arrow" android:state_activated="true"/>
+    <!-- Spinner collapsed -->
+    <item android:drawable="@drawable/ic_down_arrow"/>
+</selector>

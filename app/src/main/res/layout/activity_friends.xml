@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_background">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/termina_test_black"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:text="@string/friends"
+        android:textColor="@color/yellow"
+        android:textSize="32sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tvAddfriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sora_regular"
+        android:letterSpacing="0.05"
+        android:text="@string/add_your_tjommies"
+        android:textColor="@color/yellow"
+        android:textSize="16sp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+
+        <!-- Search -->
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/search_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvAddfriends"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sora_regular"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:hint="@string/search_by_username"
+                android:inputType="text"
+                android:padding="4dp"
+                android:textColor="@color/milk"
+                android:textColorHint="@color/mist" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/search"
+                android:src="@drawable/ic_icon_search"
+                app:tint="@color/milk" />
+    </LinearLayout>
+
+
+        <!-- Mode selector -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleModes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/llSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnModeFriends"
+            style="@style/Widget.MyApp.ToggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="@font/sora_semibold"
+            android:letterSpacing="0.02"
+            android:text="@string/friends"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnModePending"
+            style="@style/Widget.MyApp.ToggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sora_semibold"
+            android:letterSpacing="0.02"
+            android:text="@string/pending"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnModeDiscover"
+            style="@style/Widget.MyApp.ToggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sora_semibold"
+            android:letterSpacing="0.02"
+            android:text="@string/discover"
+            android:textSize="13sp" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <LinearLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toggleModes">
+
+        <ProgressBar
+            android:id="@+id/progressLoadingFriends"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="60dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/yellow"
+            android:progressDrawable="@drawable/circular_progress_custom"/>
+
+        <TextView
+            android:id="@+id/tvLoadingFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_friends"
+            android:fontFamily="@font/sora_bold"
+            android:textColor="@color/yellow"
+            android:letterSpacing="0.05"
+            android:textSize="22sp"
+            android:layout_marginTop="18dp"/>
+    </LinearLayout>
+
+    <!-- Empty state -->
+    <FrameLayout
+        android:id="@+id/friendsFavSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toggleModes"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavBar">
+
+        <!-- Recycler list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Empty state message -->
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/sora_semibold"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
+            android:text="@string/no_friends_yet"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- Bottom nav -->
+    <include
+        android:id="@+id/bottomNavBar"
+        layout="@layout/activity_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

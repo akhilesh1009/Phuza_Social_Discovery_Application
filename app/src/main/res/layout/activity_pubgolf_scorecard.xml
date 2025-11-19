@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootScorecard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ui_background">
+
+    <!-- Header Row with Back Arrow + Title (match notifications style) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBackScorecard"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/milk"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvScorecardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_golf"
+            android:textColor="@color/yellow"
+            android:textSize="26sp"
+            android:fontFamily="@font/termina_test_black"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- The rest of the original content, now inside a vertical container -->
+    <LinearLayout
+        android:id="@+id/contentScorecard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
+
+        <!-- Hole navigation row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageButton
+                android:id="@+id/btnPrevHole"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/previous_hole"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="@color/milk" />
+
+            <TextView
+                android:id="@+id/tvCurrentHole"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/hole_1"
+                android:textColor="@color/milk"
+                android:textSize="18sp"
+                android:fontFamily="@font/sora_semibold" />
+
+            <ImageButton
+                android:id="@+id/btnNextHole"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/next_hole"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/milk" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <!-- Two buttons side-by-side -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInviteFriends"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_main_custom"
+                    android:fontFamily="@font/sora_medium"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    app:backgroundTint="@null"
+                    android:text="@string/invite_friends"
+                    android:textColor="@color/black_900" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRules"
+                    style="@style/Widget.Material3.Button.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_tertiary_custom"
+                    android:fontFamily="@font/sora_medium"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:text="@string/rules"
+                    android:textColor="@color/black_900"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+            <!-- Full width primary button below -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartGame"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_secondary_custom"
+                android:fontFamily="@font/sora_medium"
+                android:textAlignment="center"
+                android:text="@string/begin_game"
+                android:textAllCaps="false"
+                android:textColor="@color/milk"
+                app:backgroundTint="@null"/>
+
+        </LinearLayout>
+
+
+        <!-- Header hint -->
+        <TextView
+            android:id="@+id/tvScoreHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_the_current_hole_under_a_player_to_edit_strokes_host_only_long_press_to_see_hole_rules"
+            android:textColor="@color/mist"
+            android:textSize="13sp"
+            android:paddingBottom="8dp" />
+
+        <!-- Scorecard list with SwipeRefreshLayout -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvScorecard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

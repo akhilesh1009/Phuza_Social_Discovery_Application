@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ui_background"
+    tools:context=".LanguagePreferenceActivity">
+
+    <!-- App Bar with close icon and save button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/close_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            app:tint="@color/milk"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textSize="18sp"
+            android:fontFamily="@font/sora_semibold"
+            android:textColor="@color/aquamarine"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_language_prefs"
+        android:textColor="@color/milk"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:fontFamily="@font/termina_test_black"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="24dp"/>
+
+    <!-- Language options -->
+    <LinearLayout
+        android:id="@+id/language_options_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/list_divider_settings"
+        android:showDividers="middle|beginning|end"
+        android:paddingHorizontal="24dp">
+
+        <!-- English -->
+        <RelativeLayout
+            android:id="@+id/option_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_english"
+                android:textColor="@color/milk"
+                android:textSize="18sp"
+                android:fontFamily="@font/sora_regular"/>
+            <ImageView
+                android:id="@+id/check_english"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_check_24"
+                app:tint="@color/aquamarine"
+                android:contentDescription="@string/enabled"
+                android:visibility="visible"/>
+        </RelativeLayout>
+        <!-- IsiZulu -->
+        <RelativeLayout
+            android:id="@+id/option_isizulu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_isizulu"
+                android:textColor="@color/milk"
+                android:textSize="18sp"
+                android:fontFamily="@font/sora_regular"/>
+            <ImageView
+                android:id="@+id/check_isizulu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_check_24"
+                app:tint="@color/aquamarine"
+                android:contentDescription="@string/enabled"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <!-- Afrikaans -->
+        <RelativeLayout
+            android:id="@+id/option_afrikaans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_afrikaans"
+                android:textColor="@color/milk"
+                android:textSize="18sp"
+                android:fontFamily="@font/sora_regular"/>
+            <ImageView
+                android:id="@+id/check_afrikaans"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_check_24"
+                app:tint="@color/aquamarine"
+                android:contentDescription="@string/enabled"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

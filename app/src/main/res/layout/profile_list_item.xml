@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="16dp"
+    android:paddingEnd="24dp"
+    android:paddingVertical="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/ui_background">
+
+    <TextView
+        android:id="@+id/list_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bars_visited"
+        android:textSize="18sp"
+        android:textColor="@color/milk"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/mist"
+        android:textSize="16sp"
+        android:fontFamily="@font/sora_regular"
+        android:layout_toStartOf="@+id/list_item_arrow"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/list_item_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_arrow_right"
+        app:tint="@color/white"
+        android:contentDescription="@string/go_to_details"/>
+
+</RelativeLayout>

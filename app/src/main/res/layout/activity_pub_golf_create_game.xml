@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootPubGolf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ui_background"
+    android:padding="16dp">
+
+    <!-- Header Row with Back Arrow + Title (match notifications style) -->
+    <RelativeLayout
+        android:id="@+id/headerPubGolf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBackPubGolf"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/milk"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titlePubGolf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_golf"
+            android:textColor="@color/yellow"
+            android:textSize="28sp"
+            android:fontFamily="@font/termina_test_black"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Map + FAB container -->
+    <FrameLayout
+        android:id="@+id/mapContainerPubGolf"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Map -->
+        <com.mapbox.maps.MapView
+            android:id="@+id/mapViewPubGolf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Create Game FAB -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabCreateGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:text="@string/create_pub_golf_game"
+            android:textColor="@color/black_900"
+            android:textSize="14sp"
+            style="@style/Widget.Material3.Button.Filled"
+            app:backgroundTint="@color/aquamarine"
+            app:icon="@drawable/ic_pub_golf"
+            app:iconTint="@color/black_900"
+            app:iconGravity="textStart"
+            app:iconPadding="6dp"
+            app:iconSize="21dp"
+            android:includeFontPadding="false" />
+
+    </FrameLayout>
+</LinearLayout>

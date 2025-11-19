@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ui_background"
+    tools:context=".NotificationsPreferencesActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_close_24"
+            android:contentDescription="@string/close"
+            android:layout_centerVertical="true"
+            app:tint="@color/milk"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:id="@+id/save_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="@string/save"
+            android:textSize="18sp"
+            android:fontFamily="@font/sora_semibold"
+            android:textColor="@color/aquamarine"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_notification_prefs"
+                android:textColor="@color/milk"
+                android:gravity="center"
+                android:fontFamily="@font/termina_test_black"
+                android:textSize="22sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Push Notifications section -->
+
+            <!-- Toggle push notifications -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/push_notifications"
+                    android:fontFamily="@font/sora_semibold"
+                    android:textColor="@color/milk"
+                    android:textSize="18sp"/>
+
+                <Switch
+                    android:id="@+id/switch_push_master"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    tools:ignore="UseSwitchCompatForToggle"/>
+            </RelativeLayout>
+            <!-- Toggle new followers -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_followers"
+                    android:fontFamily="@font/sora_regular"
+                    android:textColor="@color/milk"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_check_24"
+                    app:tint="@color/aquamarine"
+                    android:contentDescription="@string/enabled"/>
+            </RelativeLayout>
+            <!-- Toggle new followers -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_ins"
+                    android:fontFamily="@font/sora_regular"
+                    android:textColor="@color/milk"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_check_24"
+                    app:tint="@color/aquamarine"
+                    android:contentDescription="@string/enabled"/>
+            </RelativeLayout>
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Email Notifications section -->
+            <!-- Toggle email notifications -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_notifications"
+                    android:fontFamily="@font/sora_semibold"
+                    android:textColor="@color/milk"
+                    android:textSize="18sp"/>
+
+                <Switch
+                    android:id="@+id/switch_email_master"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:checked="false"
+                    tools:ignore="UseSwitchCompatForToggle"/>
+            </RelativeLayout>
+
+            <!-- Toggle new followers -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_followers"
+                    android:fontFamily="@font/sora_regular"
+                    android:textColor="@color/milk"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <!-- Toggle new followers -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_ins"
+                    android:fontFamily="@font/sora_regular"
+                    android:textColor="@color/milk"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

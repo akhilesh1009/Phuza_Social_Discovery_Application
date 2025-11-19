@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@drawable/review_card_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/avatar_no_avatar"
+                android:contentDescription="@string/app_name"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <TextView
+                android:id="@+id/tvReviewer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/connor_s_review"
+                android:letterSpacing="0.02"
+                android:fontFamily="@font/sora_regular"
+                android:textColor="@color/lavender"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/ivHeart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_heart_outline"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/lavender"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPlacePhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_bar_placeholder"
+                app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+
+            <TextView
+                android:id="@+id/tvBlurb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/sora_regular"
+                android:letterSpacing="0.05"
+                android:layout_weight="1"
+                android:text="@string/lock_stock_had_good_music_but_it_gets_a_bit_crowded"
+                android:textColor="@color/milk"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Stars row (0–5 using ic_star) -->
+        <LinearLayout
+            android:id="@+id/starsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/rStar1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/stars"
+                android:src="@drawable/ic_star"
+                app:tint="@color/star_inactive" />
+
+            <ImageView
+                android:id="@+id/rStar2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="@string/stars"
+                android:src="@drawable/ic_star"
+                app:tint="@color/star_inactive" />
+
+            <ImageView
+                android:id="@+id/rStar3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="@string/stars"
+                android:src="@drawable/ic_star"
+                app:tint="@color/star_inactive" />
+
+            <ImageView
+                android:id="@+id/rStar4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="@string/stars"
+                android:src="@drawable/ic_star"
+                app:tint="@color/star_inactive" />
+
+            <ImageView
+                android:id="@+id/rStar5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="@string/stars"
+                android:src="@drawable/ic_star"
+                app:tint="@color/star_inactive"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

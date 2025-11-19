@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_900"
+        android:elevation="4dp"
+        app:title="Discover Pubs"
+        app:titleCentered="true"
+        app:titleTextColor="@color/milk"
+        app:navigationIcon="@drawable/ic_round_arrow_back_24"
+        app:layout_anchor="@id/mapView"
+        app:layout_anchorGravity="top"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Map -->
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Search card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/mapView"
+        app:layout_anchorGravity="top|center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="72dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/black_900"
+        app:strokeColor="@color/slate_blue_30"
+        app:strokeWidth="1dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearch"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_bars_maps"
+            app:startIconDrawable="@android:drawable/ic_menu_search"
+            app:startIconTint="@color/aquamarine"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/aquamarine"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/black_900"
+            app:boxStrokeColor="@color/slate_blue_30"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/inputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/milk"
+                android:textColorHint="@color/mist"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- My location FAB -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_900"
+        app:icon="@android:drawable/ic_menu_mylocation"
+        app:iconTint="@color/black_900"
+        app:backgroundTint="@color/aquamarine"
+        app:layout_anchor="@id/mapView"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="10dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

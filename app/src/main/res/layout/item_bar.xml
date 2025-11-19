@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="4dp"
+    android:background="@color/ui_background">
+<!--    android:layout_margin="16dp" try this-->
+
+    <!-- Avatar / Bar Image -->
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bar_placeholder" />
+
+    <!-- Bar Name centered perfectly inside the circle -->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:gravity="center"
+        android:text="@string/bar_name"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="@color/black"
+        android:fontFamily="@font/termina_test_black"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:background="@android:color/transparent" />
+
+    <!-- Selector circle -->
+    <ImageView
+        android:id="@+id/imgSelector"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/selecter"
+        android:scaleType="centerInside"
+        android:background="@drawable/selector_circle_bg"
+        android:visibility="visible"/>
+</FrameLayout>

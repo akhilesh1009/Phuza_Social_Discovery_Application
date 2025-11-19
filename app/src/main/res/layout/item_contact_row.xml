@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/ui_background"
+    app:strokeColor="@color/milk"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:background="?attr/selectableItemBackground">
+
+        <!-- Initials avatar circle -->
+        <!-- Avatar container -->
+        <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/avatar_no_avatar">
+
+            <!-- ImageView for actual avatar -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/avatar_no_avatar"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                android:contentDescription="@string/avatar"/>
+        </FrameLayout>
+
+        <!-- Name + meta (username / email) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/milk"
+                android:textSize="16sp"
+                android:fontFamily="@font/sora_semibold"
+                tools:text="Jane Smith" />
+
+            <TextView
+                android:id="@+id/tvMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                android:fontFamily="@font/sora_regular"
+                android:layout_marginTop="2dp"
+                tools:text="a@jane_doe • jane@uni.edu" />
+        </LinearLayout>
+
+        <!-- Chat icon on the right -->
+        <ImageView
+            android:id="@+id/ivStartChat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/new_chat"
+            android:src="@drawable/ic_chat"
+            app:tint="@color/yellow"
+            android:padding="2dp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

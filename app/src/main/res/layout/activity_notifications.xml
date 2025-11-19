@@ -1,0 +1,70 @@
+<!-- res/layout/activity_notifications.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootNotifications"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ui_background"
+    android:padding="16dp">
+
+    <!-- Header Row with Back Arrow + Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/milk"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
+            android:textColor="@color/yellow"
+            android:textSize="28sp"
+            android:fontFamily="@font/termina_test_black"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/friendsFavSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Notifications List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"/>
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_notifications_yet"
+        android:gravity="center"
+        android:fontFamily="@font/sora_semibold"
+        android:textColor="@color/yellow"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+
+    </FrameLayout>
+</LinearLayout>

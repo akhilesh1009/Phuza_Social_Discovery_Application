@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginEnd="4dp"
+    android:foreground="?selectableItemBackgroundBorderless"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_score_cell"
+        android:padding="4dp">
+
+        <!-- TOP: strokes for this hole -->
+        <TextView
+            android:id="@+id/tvHoleStrokes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="24dp"
+            android:text="–"
+            android:textColor="@color/milk"
+            android:textSize="14sp"
+            android:fontFamily="@font/sora_semibold" />
+
+        <!-- dashed divider -->
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/bg_dashed_line" />
+
+        <!-- BOTTOM: vs-par only: +2 / -1 / E -->
+        <TextView
+            android:id="@+id/tvHoleVsPar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="18dp"
+            android:text="E"
+            android:textColor="@color/milk"
+            android:textSize="12sp"
+            android:fontFamily="@font/sora_regular" />
+    </LinearLayout>
+</FrameLayout>
