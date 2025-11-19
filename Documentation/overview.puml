@@ -1,0 +1,67 @@
+@startuml API_Overview_Clean
+left to right direction
+skinparam componentStyle rectangle
+skinparam wrapWidth 260
+skinparam maxMessageSize 200
+title Bar-Hopping API (Client -> App -> Firebase Auth -> API)
+
+actor USER as "Client"
+
+' --- Left cluster (kept together) ---
+package "Client & Auth" as LEFT {
+  top to bottom direction
+  rectangle "Mobile App" as APP
+  cloud "Firebase Auth (Login -> ID token)" as FB_AUTH
+}
+
+' --- API centered between LEFT and RIGHT ---
+node "Bar-Hopping API" as API {
+  top to bottom direction
+
+  package "Discovery & Route" as EP_DISC {
+    top to bottom direction
+    component "POST /api/locations"      as EP_LOCATIONS
+    component "POST /api/discover-route" as EP_DISCOVER
+    component "POST /api/generate-route" as EP_GENERATE
+  }
+
+  package "Social" as EP_SOC {
+    top to bottom direction
+    component "POST   /api/checkins"                          as EP_CHECKIN_POST
+    component "DELETE /api/checkins/:id"                      as EP_CHECKIN_DEL
+    component "GET    /api/friends"                           as EP_FRIENDS_GET
+    component "POST   /api/friends/:friendId"                 as EP_FRIENDS_POST
+    component "DELETE /api/friends/:friendId"                 as EP_FRIENDS_DEL
+    component "GET    /api/friends/checkins?locationId&since" as EP_FRIENDS_CHKIN_GET
+    }
+
+  ' keep Discovery above Social
+  EP_DISC -[hidden]down- EP_SOC
+}
+
+' --- Right cluster (kept together) ---
+package "Data Sources" as RIGHT {
+  top to bottom direction
+  cloud "Overpass (OpenStreetMap)" as OSM
+  database "MongoDB" as DB
+}
+
+' --- Hidden links to balance layout (helps center API) ---
+LEFT -[hidden]-> API
+LEFT -[hidden]-> API
+API  -[hidden]-> RIGHT
+API  -[hidden]-> RIGHT
+
+
+' --- Flows ---
+Client --> APP
+APP  --> FB_AUTH : Sign in
+FB_AUTH --> APP : ID token
+APP  --> API : HTTPS JSON (Authorization: ID token)
+API  --> APP : JSON response
+
+' READ = green dotted from source -> API, WRITE = red solid API -> DB
+OSM -[#2E7D32]-.-> API : READ (find pubs)
+DB  -[#2E7D32]-.-> API : READ (lookup/lists)
+API -[#C62828]-> DB  : WRITE (save places/check-ins/friends)
+@enduml

@@ -1,0 +1,29 @@
+@startuml API_DataFlow_Social
+left to right direction
+skinparam componentStyle rectangle
+skinparam wrapWidth 280
+skinparam maxMessageSize 200
+title Data Flow: Social Endpoints
+
+database "MongoDB" as DB
+
+package "Endpoints: Social" {
+  top to bottom direction
+  component "POST   /api/checkins"                          as EP_CHECKIN_POST
+  component "DELETE /api/checkins/:id"                      as EP_CHECKIN_DEL
+  component "GET    /api/friends"                           as EP_FRIENDS_GET
+  component "POST   /api/friends/:friendId"                 as EP_FRIENDS_POST
+  component "DELETE /api/friends/:friendId"                 as EP_FRIENDS_DEL
+  component "GET    /api/friends/checkins?locationId&since" as EP_FRIENDS_CHKIN_GET
+  }
+
+' WRITE (endpoint -> DB) = solid red
+EP_CHECKIN_POST -[#C62828]-> DB : WRITE (new check-in)
+EP_CHECKIN_DEL  -[#C62828]-> DB : WRITE (remove check-in)
+EP_FRIENDS_POST -[#C62828]-> DB : WRITE (add friend)
+EP_FRIENDS_DEL  -[#C62828]-> DB : WRITE (remove friend)
+
+' READ (DB -> endpoint) = dotted green
+DB -[#2E7D32]-.-> EP_FRIENDS_GET       : READ (friend list)
+DB -[#2E7D32]-.-> EP_FRIENDS_CHKIN_GET : READ (friends' check-ins)
+@enduml

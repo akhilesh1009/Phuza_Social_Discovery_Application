@@ -1,0 +1,70 @@
+@startuml Data_Model
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+' ===== Core entities =====
+class User {
+  + userId: string <<Firebase UID>>
+  + displayName: string
+  + email: string
+  + photoUrl: string?
+  + createdAt: Date
+}
+
+class Location {
+  + locationId: string
+  + name: string
+  + address: string
+  + coordinates: GeoPoint
+  + category: string <<bar|pub|nightclub>>
+  + source: string   <<overpass|manual>>
+  + createdAt: Date
+  + updatedAt: Date
+}
+
+class GeoPoint {
+  + latitude: number
+  + longitude: number
+}
+
+class Checkin {
+  + checkinId: string
+  + userId: string
+  + locationId: string
+  + message: string?
+  + visibility: string <<private|friends|public>>
+  + createdAt: Date
+  + expiresAt: Date?
+}
+
+class Route {
+  + routeId: string
+  + userId: string
+  + start: GeoPoint
+  + totalDistanceKm: number
+  + estimatedMinutes: number
+  + createdAt: Date
+}
+
+class Friendship {
+  + friendshipId: string
+  + requesterId: string <<userId>>
+  + addresseeId: string <<userId>>
+  + status: string <<pending|accepted|blocked>>
+  + createdAt: Date
+  + updatedAt: Date
+}
+
+' ===== Relationships =====
+User "1" -down- "many" Checkin
+Location "1" -down- "many" Checkin
+
+User "1" -down- "many" Route
+Route "1" -down- "many" Location
+
+User "1" -down- "many" Friendship
+User "1" -up-   "many" Friendship
+
+Location "1" -down- "1" GeoPoint
+Route "1" -down- "1" GeoPoint
+@enduml
